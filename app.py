@@ -6,18 +6,10 @@ import pickle
 from flask_cors import CORS  # Import CORS
 
 app = Flask(__name__)
-CORS(app)  # Enable CORS for all routes
-
-# Get the directory of the current file
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-
-# Correct paths for your model and scaler
-SCALER_PATH = os.path.join(BASE_DIR, "scaler.pkl")
-MODEL_PATH = os.path.join(BASE_DIR, "models", "chess_bot_model_1.pkl")
 
 # Load the trained model and scaler
-model_1 = joblib.load(MODEL_PATH)
-scaler = joblib.load(SCALER_PATH)
+model_1 = pickle.load(open("models/chess_bot_model_1.pkl", "rb"))
+scaler = pickle.load(open("scaler.pkl", "rb"))
 
 # Threshold for direct bot detection when turns < 45
 THRESHOLD_MILLISECONDS = 3000
