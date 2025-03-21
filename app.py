@@ -19,8 +19,8 @@ SCALER_PATH = os.path.join(BASE_DIR, "scaler.pkl")
 MODEL_PATH = os.path.join(BASE_DIR, "models", "chess_bot_model_1.pkl")
 
 # Load the trained model and scaler
-model_1 = joblib.load("C:\Users\KIIT\Desktop\Git-hub\models\chess_bot_model_1.pkl")
-scaler = joblib.load("C:\Users\KIIT\Desktop\Git-hub\scaler.pkl")
+model_1 = joblib.load(r"C:\Users\KIIT\Desktop\Git-hub\models\chess_bot_model_1.pkl")
+scaler = joblib.load(r"C:\Users\KIIT\Desktop\Git-hub\scaler.pkl")
 
 # Threshold for direct bot detection when turns < 45
 THRESHOLD_MILLISECONDS = 3000
