@@ -5,11 +5,8 @@ import os
 import pickle
 from flask_cors import CORS  # Import CORS
 
-
-CORS(app)  # Enable CORS for all routes
-
 app = Flask(__name__)
-
+CORS(app)  # Enable CORS for all routes
 
 # Get the directory of the current file
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
